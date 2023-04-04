@@ -1,0 +1,11 @@
+.pdfWrapper {
+  overflow: auto;
+  background-color: #eee;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}

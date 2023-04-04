@@ -1,0 +1,1 @@
+source: https://sbcode.net/typescript/

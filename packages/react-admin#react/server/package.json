@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "server": "json-server --watch ./db/db.json --port 5000 --middlewares ./db/range.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@types/node": "^18.0.1",
+    "json-server": "^0.17.0"
+  }
+}

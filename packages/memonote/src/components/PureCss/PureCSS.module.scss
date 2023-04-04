@@ -1,0 +1,47 @@
+.root {
+  width: 150px;
+  height: 100px;
+  display: flex;
+  color: white;
+  background-color: darkcyan;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 1em 1em 1em rgba(darkcyan, 0.1);
+  &::after {
+    content: inherit;
+    background-color: inherit;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    bottom: -100%;
+  }
+  .box {
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    font-size: 36px;
+    &::after {
+      content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+      position: relative;
+      white-space: pre;
+    }
+    &.first::after {
+      animation: animate 100s steps(10) infinite;
+    }
+    &.second::after {
+      animation: animate 10s steps(10) infinite;
+    }
+    &.third::after {
+      animation: animate 1s steps(10) infinite;
+    }
+  }
+}
+@keyframes animate {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -10em;
+  }
+}

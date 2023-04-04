@@ -1,0 +1,57 @@
+.root {
+  display: flex;
+  background-color: rgba(#aaa, 0.2);
+  justify-content: space-around;
+  div {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  span {
+    width: 1rem;
+    height: 1rem;
+    background-color: red;
+    border-radius: 50%;
+  }
+  .dice1 {
+    justify-content: center;
+    align-items: center;
+  }
+  .dice2 {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  .dice3 {
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    & :nth-child(1) {
+      align-self: flex-start;
+    }
+    & :nth-child(3) {
+      align-self: flex-end;
+    }
+  }
+  .dice1,
+  .dice2,
+  .dice3,
+  .dice4,
+  .dice5,
+  .dice6,
+  .dice7,
+  .dice8,
+  .dice9 {
+    flex-direction: column;
+    justify-content: space-around;
+    div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: initial;
+    }
+  }
+}

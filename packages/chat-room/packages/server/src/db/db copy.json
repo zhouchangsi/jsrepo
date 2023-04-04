@@ -1,0 +1,38 @@
+{
+    "rooms": [
+        {
+            "name": "Default room",
+            "users": [
+                {
+                    "id": "00",
+                    "name": "system"
+                }
+            ],
+            "messages": [
+                {
+                    "content": "Welcome to default room!",
+                    "sender": "system"
+                },
+                {
+                    "content": "Welcome to default room!",
+                    "sender": "system"
+                }
+            ]
+        },
+        {
+            "name": "Room 01",
+            "users": [
+                {
+                    "id": "00",
+                    "name": "system"
+                }
+            ],
+            "messages": [
+                {
+                    "sender": "system",
+                    "content": "This is room 01!"
+                }
+            ]
+        }
+    ]
+}

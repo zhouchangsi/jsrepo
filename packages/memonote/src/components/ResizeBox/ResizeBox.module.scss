@@ -1,0 +1,37 @@
+.root {
+  min-width: 10px;
+  min-height: 10px;
+  /**Direction**/
+  &.N {
+    cursor: n-resize;
+    box-shadow: 0px -9px red;
+  }
+  &.E {
+    cursor: e-resize;
+    box-shadow: 9px 0px red;
+  }
+  &.S {
+    cursor: s-resize;
+    box-shadow: 0px 9px red;
+  }
+  &.W {
+    cursor: w-resize;
+    box-shadow: -9px 0px red;
+  }
+  &.NW {
+    cursor: nw-resize;
+    box-shadow: -9px -9px red;
+  }
+  &.NE {
+    cursor: ne-resize;
+    box-shadow: 9px -9px red;
+  }
+  &.SE {
+    cursor: se-resize;
+    box-shadow: 9px 9px red;
+  }
+  &.SW {
+    cursor: sw-resize;
+    box-shadow: -9px 9px red;
+  }
+}

@@ -1,0 +1,25 @@
+.root {
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  .themeCheckBoxContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    box-shadow: var(--box-shadow-sm);
+    input {
+      margin-right: 0.5rem;
+    }
+  }
+  span{
+    padding: .5rem;
+  }
+  .primary {
+    background-color: var(--primary);
+    color: var(--gray-200);
+  }
+}

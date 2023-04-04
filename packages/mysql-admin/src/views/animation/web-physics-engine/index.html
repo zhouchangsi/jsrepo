@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+
+  <style>
+    #display {
+      margin: auto;
+    }
+
+    #canvas {
+      border: red ridge 1px;
+    }
+
+    #bar {
+      width: 550px;
+      height: 40px;
+      background-color: #0aa;
+    }
+
+    #b {
+      width: 50px;
+      height: 40px;
+      background-color: darkgrey;
+      text-align: center;
+      font-size: 24px;
+      /* position: absolute; */
+      /* left: 100px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="display">
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <div id="bar">
+      <div id="b"></div>
+    </div>
+  </div>
+</body>
+
+<!-- script -->
+<script src="./Vector.js"></script>
+<script src="./Shape.js"></script>
+<script src="./CreateWorld.js"></script>
+<script src="./Main.js"></script>
+<script>
+  /** @type {HTMLCanvasElement} */
+  const bar = document.getElementById('bar');
+  const b = document.getElementById('b');
+  // const canvas = document.getElementById('canvas');
+  // const context = canvas.getContext('2d');
+
+  var l = 0;
+  var timer = setInterval(drawWorld, 20);
+  b.addEventListener("mousedown", function (e) {
+
+    // f
+    let downX = e.offsetX;
+    function setTime(e) {
+      function setLeft() {
+        l = e.clientX - downX;
+        if (l < 0)
+          l = 0;
+        if (l > 500)
+          l = 500;
+        b.style.marginLeft = l + "px";
+        b.innerText = l;
+        return l;
+      }
+      l = setLeft();
+      clearInterval(timer);
+      timer = setInterval(drawWorld, l);
+      console.log(l);
+    }
+    //
+
+    // listener
+    document.addEventListener("mousemove", setTime, false);
+    //
+
+    // remove listener
+    function rmSetLeft() {
+      document.removeEventListener("mousemove", setTime);
+    }
+    document.addEventListener("mouseup", rmSetLeft, false);
+    //
+
+  }, false);
+
+
+</script>
+<!-- <script src="./script.js"></script> -->
+
+</html>

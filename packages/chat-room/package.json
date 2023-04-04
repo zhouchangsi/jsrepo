@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "chat-room",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^5.5.2"
+  },
+  "license": "MIT"
+}

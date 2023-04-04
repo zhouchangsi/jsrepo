@@ -1,0 +1,15 @@
+{
+  "name": "react-admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "setup": "yarn install && yarn --cwd server install && yarn --cwd client install",
+    "server": "yarn --cwd server run server",
+    "client": "yarn --cwd client run start",
+    "dev": "concurrently \"yarn run server\" \"yarn run client\" "
+  },
+  "dependencies": {
+    "concurrently": "^7.2.2"
+  }
+}

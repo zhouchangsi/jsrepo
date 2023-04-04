@@ -1,0 +1,30 @@
+.root {
+  width: 8rem;
+  height: 8rem;
+  display: grid;
+  background-color: lightblue;
+  border-radius: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  padding: .5rem;
+  .dot {
+    background-color: red;
+    border-radius: 10rem;
+  }
+  .top {
+    grid-row-start: 1;
+  }
+  .bottom {
+    grid-row-start: 3;
+  }
+  .middle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+  .left {
+    grid-column-start: 1;
+  }
+  .right {
+    grid-column-start: 3;
+  }
+}
